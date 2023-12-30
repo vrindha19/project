@@ -38,3 +38,18 @@ class CustomerProfileForm(forms.ModelForm):
     widgets = {'name':forms.TextInput(attrs={'class':'form-control'}),'locality':forms.TextInput(attrs={'class':'form-control'}), 'city':forms.TextInput(attrs={'class':'form-control'}), 
     'state':forms.Select(attrs={'class':'form-control'}),
     'zipcode':forms.NumberInput(attrs={'class':'form-control'})}
+
+
+QUANTITY_CHOICES = [
+    ('250', '250 grams'),
+    ('500', '500 grams'),
+    ('750', '750 grams'),
+    ('1000', '1000 grams'),
+    ]
+
+class ProductQuantityForm(forms.Form):
+    quantity = forms.ChoiceField(choices=QUANTITY_CHOICES, widget=forms.Select(attrs={'class': 'item-select'}))
+
+   
+ 
+ 

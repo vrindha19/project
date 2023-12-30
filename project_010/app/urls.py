@@ -5,8 +5,8 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from .forms import LoginForm, MyPasswordChangeForm, MyPasswordResetForm, MySetPasswordForm
 urlpatterns = [
-    #  path('fruits/<slug:data>', views.fruits, name='fruits'),
-    #   path('vegitables/<slug:data>', views.vegitables, name='vegitables'),
+     path('fruits/<slug:data>', views.fruits, name='fruits'),
+      path('vegitables/<slug:data>', views.vegitables, name='vegitables'),
     path('payment/', views.payment, name='payment'),
     path('forgot_password/', views.forgot_password, name='forgot_password'),
     path('about/', views.about, name='about'),
@@ -14,15 +14,14 @@ urlpatterns = [
     path('logout_action/', views.logout_action, name='logout_action'),
     path('contact/', views.contact, name='contact'),
     path('add_product/', views.add_product, name='add_product'),
-    path('view_product/', views.view_product, name='view_product'),
      path('shopping_cart/', views.shopping_cart, name='shopping_cart'),
     path('register/', views.register, name='register'),
     path('login/', views.login, name='login'),
-    path('FV/', views.FV, name='FV'),
-  
-    # path('FV/<str:data>/', views.FV, name='FV'),
-     path('mobile/', views.FV, name='mobile'),
-   path('FV/<str:data>/', views.FV, name='FV'),
+    path('product/', views.allproduct, name='product'),
+
+  #  path('mobiles/', views.mobile, name='mobiles'),
+  #   path('mobiles/<slug:data>', views.mobile, name='mobiledata'),
+  #  path('FV/<str:data>/', views.FV, name='FV'),
    
      path('', views.home, name='home'),
     # path('', views.home),
@@ -30,7 +29,6 @@ urlpatterns = [
     # path('product-detail', views.product_detail, name='product-detail'),
     # path('product-detail/<int:pk>/', views.ProductDetailView.as_view(), name='product-detail'),
     path('product-detail/<int:pk>/', views.ProductDetailView.as_view(), name='product-detail'),
-    path('product/', views.product, name='product'),
     path('add-to-cart/', views.add_to_cart, name='add-to-cart'),
     path('cart/', views.show_cart, name='showcart'),
     path('pluscart/', views.plus_cart),
@@ -40,7 +38,7 @@ urlpatterns = [
     path('address/', views.address, name='address'),
     path('orders/', views.orders, name='orders'),
     path('paymentdone/', views.payment_done, name='paymentdone'),
-
+    path('view', views.product_view, name='product_view'),  # Define URL pattern for product view
     # path('mobile/', views.mobile, name='mobile'),
     # path('mobile/<slug:data>', views.mobile, name='mobiledata'),
     # path('Category/<slug:data>', views.Category, name='Category'),
@@ -57,5 +55,14 @@ urlpatterns = [
     path("password-reset-confirm/<uidb64>/<token>/", auth_views.PasswordResetConfirmView.as_view(template_name='password_reset_confirm.html', form_class=MySetPasswordForm), name="password_reset_confirm"),
     path("password-reset-complete/", auth_views.PasswordResetCompleteView.as_view(template_name='password_reset_complete.html'), name="password_reset_complete"),
 
-    path('registration/', views.CustomerRegistrationView.as_view(), name='customerregistration')
+    path('registration/', views.CustomerRegistrationView.as_view(), name='customerregistration'),
+
+
+
+
+
+
+
+    #PRODUCT DETALIS############
+    path('productdetalis/',views.productdetail,name="productdetalis"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

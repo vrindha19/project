@@ -53,23 +53,23 @@ class Customer(models.Model):
 
 
 CATEGORY_CHOICES = (
- ('C', 'Category'),
+
  ('F', 'Fruits'),
  ('V', 'Vegetables'),
- ('C', 'Category'),
+
 )
 class Product(models.Model):
- title = models.CharField(max_length=100)
- selling_price = models.FloatField()
- discounted_price = models.FloatField()
- description = models.TextField()
- brand = models.CharField(max_length=100)
- category = models.CharField( choices=CATEGORY_CHOICES, max_length=2)
- product_image = models.ImageField(upload_to='productimg')
+    title = models.CharField(max_length=255)
+    selling_price = models.DecimalField(max_digits=10, decimal_places=2)
+    category = models.CharField(choices=CATEGORY_CHOICES, max_length=2)
+    product_image = models.ImageField(upload_to='images/')  # Example for product image, adjust as needed
 
- def __str__(self):
-  return str(self.id)
+    def __str__(self):
+        return self.title
+    # You can also add more fields as necessary
 
+    def __str__(self):
+        return self.title
 
 class Cart(models.Model):
  user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -104,3 +104,4 @@ class OrderPlaced(models.Model):
  @property
  def total_cost(self):
    return self.quantity * self.product.discounted_price
+ 

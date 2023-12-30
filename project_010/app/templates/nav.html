@@ -18,9 +18,8 @@
 
 
         <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
+            <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a> -->
             <ul class="dropdown-menu">
-              <li><a href="{% url 'FV' data='some_value_here' %}">Fruits & Vegetables</a></li>                        </ul>
           </li>
           
       </div>
@@ -31,8 +30,10 @@
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Product <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="{% url 'add_product' %}">Add Product</a></li>
-            <li><a href="{% url 'view_product' %}">View product</a></li>
+           
             <li><a href="{% url 'product' %}">product</a></li>
+          
+           
 
           </ul>
         </li>

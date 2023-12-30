@@ -1,8 +1,7 @@
 {% include 'header.html' %}
 {% include 'nav.html' %}
-{% block content %}
 {% load static %}
-{% block title %}Home{% endblock title %}
+{% block title %} {% endblock title %}
     <style>
         body{
     margin: 0;
@@ -856,7 +855,7 @@ textarea {
         
     
     
-  <div class="search-box">
+  <div class="search-box" >
        <form>
             <input type="text" name="search" placeholder="Search" class="search-input">
             <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
@@ -923,250 +922,245 @@ textarea {
         <!--            Vegetables          -->
 
         <div class="deals-container" id="vegetables">
-            <div class="main">
-                <div class="title">VEGETABLES</div>
-            </div>
-            <div class="items">
-                <div class="images">
-                  <img src="{% static 'images/product-1.jpg' %}" alt="" class="item-image-size">                </div>
-                <div class="description">
-                    <b>capsicum</b><br>
-                    <div class="item-select">
-                        Price : Rs15/500grams
-                    </div>
-                    <label>Qty:</label>
-                    <select name="" id="" class="item-select">
-                        <option value="">250 grams</option>
-                        <option value="">500 grams</option>
-                        <option value="">750 grams</option>
-                        <option value="">1000 grams</option>
-                    </select><br>
-                    <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
-                </div>
-            </div>
-            <div class="items">
-                <div class="images">
-                    <img src="{% static 'images/product-14.png' %}" alt="" class="item-image-size">
-                </div>
-                <div class="description">
-                    <b>Brinjal</b><br>
-                    <div class="item-select">
-                        Price : Rs20/500grams
-                    </div>
-                    <label>Qty:</label>
-                    <select name="" id="" class="item-select">
-                        <option value="">250 grams</option>
-                        <option value="">500 grams</option>
-                        <option value="">750 grams</option>
-                        <option value="">1000 grams</option>
-                    </select><br>
-                    <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
-                </div>
-            </div>
-            <div class="items">
-                <div class="images">
-                    <img src="{% static 'images/product-18.jpg' %}" alt="" class="item-image-size">
-                </div>
-                <div class="description">
-                    <b>cucumber</b><br>
-                    <div class="item-select">
-                        Price : Rs25/500grams
-                    </div>
-                    <label>Qty:</label>
-                    <select name="" id="" class="item-select">
-                        <option value="">250 grams</option>
-                        <option value="">500 grams</option>
-                        <option value="">750 grams</option>
-                        <option value="">1000 grams</option>
-                    </select><br>
-                    <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
-                </div>
-            </div>
-            <div class="items">
-                <div class="images">
-                    <img src="{% static 'images/product-4.jpg' %}" alt="" class="item-image-size">
-                </div>
-                <div class="description">
-                    <b>Purple Cabbage</b><br>
-                    <div class="item-select">
-                        Price : Rs10/500grams
-                    </div>
-                    <label>Qty:</label>
-                    <select name="" id="" class="item-select">
-                        <option value="">250 grams</option>
-                        <option value="">500 grams</option>
-                        <option value="">750 grams</option>
-                        <option value="">1000 grams</option>
-                    </select><br>
-                    <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
-                </div>
-            </div>
-            <div class="items">
-                <div class="images">
-                    <img src="{% static 'images/product-5.jpg' %}" alt="" class="item-image-size">
-                </div>
-                <div class="description">
-                    <b>Tomato</b><br>
-                    <div class="item-select">
-                        Price : Rs30/500grams
-                    </div>
-                    <label>Qty:</label>
-                    <select name="" id="" class="item-select">
-                        <option value="">250 grams</option>
-                        <option value="">500 grams</option>
-                        <option value="">750 grams</option>
-                        <option value="">1000 grams</option>
-                    </select><br>
-                    <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
-                </div>
-            </div>
-            <div class="items">
-                <div class="images">
-                    <img src="{% static 'images/product-6.jpg' %}" alt="" class="item-image-size">
-                </div>
-                <div class="description">
-                    <b>Brocolli</b><br>
-                    <div class="item-select">
-                        Price : Rs20/500grams
-                    </div>
-                    <label>Qty:</label>
-                    <select name="" id="" class="item-select">
-                        <option value="">250 grams</option>
-                        <option value="">500 grams</option>
-                        <option value="">750 grams</option>
-                        <option value="">1000 grams</option>
-                    </select><br>
-                    <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
-                </div>
-            </div>
-        </div>
-
-<!--                Fruits              -->
+          <div class="main">
+              <div class="title">VEGETABLES</div>
+          </div>
+          <div class="items">
+              <div class="images">
+                <img src="{% static 'images/product-1.jpg' %}" alt="" class="item-image-size">                </div>
+              <div class="description">
+                  <b>capsicum</b><br>
+                  <div class="item-select">
+                      Price : Rs15/500grams
+                  </div>
+                  <label>Qty:</label>
+                  <select name="" id="" class="item-select">
+                      <option value="">250 grams</option>
+                      <option value="">500 grams</option>
+                      <option value="">750 grams</option>
+                      <option value="">1000 grams</option>
+                  </select><br>
+                  <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
+              </div>
+          </div>
+          <!-- <div class="items">
+              <div class="images">
+                  <img src="{% static 'images/product-14.png' %}" alt="" class="item-image-size">
+              </div>
+              <div class="description">
+                  <b>Brinjal</b><br>
+                  <div class="item-select">
+                      Price : Rs20/500grams
+                  </div>
+                  <label>Qty:</label>
+                  <select name="" id="" class="item-select">
+                      <option value="">250 grams</option>
+                      <option value="">500 grams</option>
+                      <option value="">750 grams</option>
+                      <option value="">1000 grams</option>
+                  </select><br>
+                  <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
+              </div>
+          </div> -->
+          <div class="items">
+              <div class="images">
+                  <img src="{% static 'images/product-18.jpg' %}" alt="" class="item-image-size">
+              </div>
+              <div class="description">
+                  <b>cucumber</b><br>
+                  <div class="item-select">
+                      Price : Rs25/500grams
+                  </div>
+                  <label>Qty:</label>
+                  <select name="" id="" class="item-select">
+                      <option value="">250 grams</option>
+                      <option value="">500 grams</option>
+                      <option value="">750 grams</option>
+                      <option value="">1000 grams</option>
+                  </select><br>
+                  <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
+              </div>
+          </div>
+          <!-- <div class="items">
+              <div class="images">
+                  <img src="{% static 'images/product-4.jpg' %}" alt="" class="item-image-size">
+              </div>
+              <div class="description">
+                  <b>Purple Cabbage</b><br>
+                  <div class="item-select">
+                      Price : Rs10/500grams
+                  </div>
+                  <label>Qty:</label>
+                  <select name="" id="" class="item-select">
+                      <option value="">250 grams</option>
+                      <option value="">500 grams</option>
+                      <option value="">750 grams</option>
+                      <option value="">1000 grams</option>
+                  </select><br>
+                  <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
+              </div>
+          </div> -->
+          <div class="items">
+              <div class="images">
+                  <img src="{% static 'images/product-5.jpg' %}" alt="" class="item-image-size">
+              </div>
+              <div class="description">
+                  <b>Tomato</b><br>
+                  <div class="item-select">
+                      Price : Rs30/500grams
+                  </div>
+                  <label>Qty:</label>
+                  <select name="" id="" class="item-select">
+                      <option value="">250 grams</option>
+                      <option value="">500 grams</option>
+                      <option value="">750 grams</option>
+                      <option value="">1000 grams</option>
+                  </select><br>
+                  <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
+              </div>
+          </div>
+         <!-- <div class="items">
+              <div class="images">
+                  <img src="{% static 'images/product-6.jpg' %}" alt="" class="item-image-size">
+              </div>
+              <div class="description">
+                  <b>Brocolli</b><br>
+                  <div class="item-select">
+                      Price : Rs20/500grams
+                  </div>
+                  <label>Qty:</label>
+                  <select name="" id="" class="item-select">
+                      <option value="">250 grams</option>
+                      <option value="">500 grams</option>
+                      <option value="">750 grams</option>
+                      <option value="">1000 grams</option>
+                  </select><br>
+                  <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
+              </div> -->
+          </div>
+   </div>
+                <!-- Fruits              --> -->
 
 <div class="deals-container" id="fruits">
-    <div class="main">
-        <div class="title">FRUITS</div>
-    </div>
-    <div class="items">
-        <div class="images">
-            <img src="{% static 'images/product_01.jpg' %}" alt="" class="item-image-size">
-        </div>
-        <div class="description">
-            <b>Apple</b><br>
-            <div class="item-select">
-                Price : Rs25/500grams
-            </div>
-            <label>Qty:</label>
-            <select name="" id="" class="item-select">
-                <option value="">250 grams</option>
-                <option value="">500 grams</option>
-                <option value="">750 grams</option>
-                <option value="">1000 grams</option>
-            </select><br>
-            <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
-        </div>
-    </div>
-    <div class="items">
-        <div class="images">
-            <img src="{% static 'images/Strawberries.jpg' %}" alt="" class="item-image-size">
-        </div>
-        <div class="description">
-            <b>Strawberries</b><br>
-            <div class="item-select">
-                Price : Rs35/500grams
-            </div>
-            <label>Qty:</label>
-            <select name="" id="" class="item-select">
-                <option value="">250 grams</option>
-                <option value="">500 grams</option>
-                <option value="">750 grams</option>
-                <option value="">1000 grams</option>
-            </select><br>
-            <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
-        </div>
-    </div>
-    <div class="items">
-        <div class="images">
-            <img src="{% static 'images/orange.jpg' %}" alt="" class="item-image-size">
-        </div>
-        <div class="description">
-            <b>orange</b><br>
-            <div class="item-select">
-                Price : Rs45/500grams
-            </div>
-            <label>Qty:</label>
-            <select name="" id="" class="item-select">
-                <option value="">250 grams</option>
-                <option value="">500 grams</option>
-                <option value="">750 grams</option>
-                <option value="">1000 grams</option>
-            </select><br>
-            <button class="buynow-btn">Buy Now</button>
-        </div>
-    </div>
-    <div class="items">
-        <div class="images">
-            <img src="{% static 'images/mango.Jpg' %}" alt="" class="item-image-size">
-        </div>
-        <div class="description">
-            <b>mango</b><br>
-            <div class="item-select">
-                Price : Rs40/500grams
-            </div>
-            <label>Qty:</label>
-            <select name="" id="" class="item-select">
-                <option value="">250 grams</option>
-                <option value="">500 grams</option>
-                <option value="">750 grams</option>
-                <option value="">1000 grams</option>
-            </select><br>
-            <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
-        </div>
-    </div>
-    <div class="items">
-        <div class="images">
-            <img src="{% static 'images/pomegranate1.jpg' %}" alt="" class="item-image-size">
-        </div>
-        <div class="description">
-            <b>Pomegranates</b><br>
-            <div class="item-select">
-                Price : Rs20/500grams
-            </div>
-            <label>Qty:</label>
-            <select name="" id="" class="item-select">
-                <option value="">250 grams</option>
-                <option value="">500 grams</option>
-                <option value="">750 grams</option>
-                <option value="">1000 grams</option>
-            </select><br>
-            <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
-        </div>
-    </div>
-    <div class="items">
-        <div class="images">
-            <img src="{% static 'images/grapes.jpg' %}" alt="" class="item-image-size">
-        </div>
-        <div class="description">
-            <b>Grapes</b><br>
-            <div class="item-select">
-                Price : Rs60/500grams
-            </div>
-            <label>Qty:</label>
-            <select name="" id="" class="item-select">
-                <option value="">250 grams</option>
-                <option value="">500 grams</option>
-                <option value="">750 grams</option>
-                <option value="">1000 grams</option>
-            </select><br>
-            <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
-        </div>
-    </div>
+  <div class="main">
+      <div class="title">FRUITS</div>
+  </div>
+  <div class="items">
+      <div class="images">
+          <img src="{% static 'images/product_01.jpg' %}" alt="" class="item-image-size">
+      </div>
+      <div class="description">
+          <b>Apple</b><br>
+          <div class="item-select">
+              Price : Rs25/500grams
+          </div>
+          <label>Qty:</label>
+          <select name="" id="" class="item-select">
+              <option value="">250 grams</option>
+              <option value="">500 grams</option>
+              <option value="">750 grams</option>
+              <option value="">1000 grams</option>
+          </select><br>
+          <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
+      </div>
+  </div>
+  <div class="items">
+      <div class="images">
+          <img src="{% static 'images/Strawberries.jpg' %}" alt="" class="item-image-size">
+      </div>
+      <div class="description">
+          <b>Strawberries</b><br>
+          <div class="item-select">
+              Price : Rs35/500grams
+          </div>
+          <label>Qty:</label>
+          <select name="" id="" class="item-select">
+              <option value="">250 grams</option>
+              <option value="">500 grams</option>
+              <option value="">750 grams</option>
+              <option value="">1000 grams</option>
+          </select><br>
+          <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
+      </div>
+  </div>
+  <div class="items">
+      <div class="images">
+          <img src="{% static 'images/orange.jpg' %}" alt="" class="item-image-size">
+      </div>
+      <div class="description">
+          <b>orange</b><br>
+          <div class="item-select">
+              Price : Rs45/500grams
+          </div>
+          <label>Qty:</label>
+          <select name="" id="" class="item-select">
+              <option value="">250 grams</option>
+              <option value="">500 grams</option>
+              <option value="">750 grams</option>
+              <option value="">1000 grams</option>
+          </select><br>
+          <button class="buynow-btn">Buy Now</button>
+      </div>
+  </div>
+  <!-- <div class="items">
+      <div class="images">
+          <img src="{% static 'images/mango.Jpg' %}" alt="" class="item-image-size">
+      </div>
+      <div class="description">
+          <b>mango</b><br>
+          <div class="item-select">
+              Price : Rs40/500grams
+          </div>
+          <label>Qty:</label>
+          <select name="" id="" class="item-select">
+              <option value="">250 grams</option>
+              <option value="">500 grams</option>
+              <option value="">750 grams</option>
+              <option value="">1000 grams</option>
+          </select><br>
+          <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
+      </div>
+  </div>
+  <div class="items">
+      <div class="images">
+          <img src="{% static 'images/pomegranate1.jpg' %}" alt="" class="item-image-size">
+      </div>
+      <div class="description">
+          <b>Pomegranates</b><br>
+          <div class="item-select">
+              Price : Rs20/500grams
+          </div>
+          <label>Qty:</label>
+          <select name="" id="" class="item-select">
+              <option value="">250 grams</option>
+              <option value="">500 grams</option>
+              <option value="">750 grams</option>
+              <option value="">1000 grams</option>
+          </select><br>
+          <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
+      </div>
+  </div>
+  <div class="items">
+      <div class="images">
+          <img src="{% static 'images/grapes.jpg' %}" alt="" class="item-image-size">
+      </div>
+      <div class="description">
+          <b>Grapes</b><br>
+          <div class="item-select">
+              Price : Rs60/500grams
+          </div>
+          <label>Qty:</label>
+          <select name="" id="" class="item-select">
+              <option value="">250 grams</option>
+              <option value="">500 grams</option>
+              <option value="">750 grams</option>
+              <option value="">1000 grams</option>
+          </select><br>
+          <a href="view_payment.html"><button class="buynow-btn">Buy Now</button></a>
+      </div>
+  </div>
 </div>
-
-<!--            Meat & Sea Foods                -->
-<!-- <div class="footer" style="text-align: center;">
-    <p>&copy; 2023 Fruits Paradise | Contact us at info@fruitsparadise.com</p>
-  </div> -->
+</div> -->
 
   <section class="about" id="about">
 	<div class="about-text">
@@ -1241,5 +1235,5 @@ textarea {
   </div>
     </body>
 </html>
-{% endblock %}
+
 {% include 'footer.html' %}

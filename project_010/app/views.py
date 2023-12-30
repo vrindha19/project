@@ -8,13 +8,14 @@ from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.http import HttpResponse
+from .forms import ProductQuantityForm
 
-# def fruits(request, data):
-#     return render(request,'fruits.product.html')
-def home(request):
+def fruits(request, data):
+    return render(request,'fruits.product.html')
+def home(request, data=None):
     return render(request,'index.html')
-# def vegitables(request, data):
-#     return render(request,'vegitables.html')
+def vegitables(request, data):
+    return render(request,'vegitables.html')
 def contact(request):
     return render(request,'contact.html')
 def add_product(request):
@@ -33,38 +34,55 @@ def orderpage(request):
     return render(request,'orderpage.html')
 def payment(request):
     return render(request,'view_payment.html')
-def view_product(request):
-    return render(request,'view_product.html')
+
 def shopping_cart(request):
     return render(request,'shopping cart.html')
 def register(request):
     return render(request,'register.html')
 def login(request):
     return render(request,'login.html')
-def product(request):
-    return render(request,'product.html')
-def FV(request, data):
-    return render(request,'FV.html')
+def allproduct(request):
+    return render(request,'all product.html')
+
+
+def product_view(request):
+    form = ProductQuantityForm()
+    
+    context = {
+        'form': form,
+        # Add other context variables as needed
+    }
+    
+    return render(request, 'product.html', context)
+
+
 
 class ProductView(View):
 	def get(self, request):
 		totalitem = 0
-		Categorys = Product.objects.filter(category='G')
+		Fruits = Product.objects.filter(category='F')
+		vegitables = Product.objects.filter(category='V')
 		if request.user.is_authenticated:
 			totalitem = len(Cart.objects.filter(user=request.user))
-		return render(request, 'view_product.html', { 'Categorys':Categorys, 'totalitem':totalitem})
+		return render(request, 'index.html',
+				 { 'Fruits':Fruits, 'vegitables':vegitables, 'totalitem':totalitem})
 
 class ProductDetailView(View):
 	def get(self, request, pk):
 		totalitem = 0
-		product = Product.objects.get(pk=pk)
+		product = Product.objects.first() 
 		print(product.id)
 		item_already_in_cart=False
 		if request.user.is_authenticated:
 			totalitem = len(Cart.objects.filter(user=request.user))
 			item_already_in_cart = Cart.objects.filter(Q(product=product.id) & Q(user=request.user)).exists()
 		return render(request, 'productdetail.html', {'product':product, 'item_already_in_cart':item_already_in_cart, 'totalitem':totalitem})
+######
+#############PRODUCT DETALIS#############
+def productdetail(request):
 
+	return render(request,'productdetail.html')
+		
 @login_required()
 def add_to_cart(request):
 	user = request.user
@@ -224,49 +242,6 @@ def orders(request):
 	op = OrderPlaced.objects.filter(user=request.user)
 	return render(request, 'orders.html', {'order_placed':op})
 
-# def Category(request, data=None):
-	
-# 	totalitem = 0
-# 	if request.user.is_authenticated:
-# 		totalitem = len(Cart.objects.filter(user=request.user))
-# 	if data==None :
-# 			Categorys = Product.objects.filter(category='C')
-# 	elif data == 'Fruits' or data == 'Vegetables':
-# 			Categorys = Product.objects.filter(category='C').filter(brand=data)
-# 	elif data == 'below':
-# 			Categorys = Product.objects.filter(category='C').filter(discounted_price__lt=200)
-# 	elif data == 'above':
-# 			Categorys = Product.objects.filter(category='C').filter(discounted_price__gt=200)
-# 			return render(request, 'fruits.product.html', {'Categorys': Categorys, 'totalitem': totalitem})
-
-def mobile(request, data=None):
-	totalitem = 0
-	if request.user.is_authenticated:
-		totalitem = len(Cart.objects.filter(user=request.user))
-	if data==None :
-			mobiles = Product.objects.filter(category='M')
-	elif data == 'Redmi' or data == 'Samsung':
-			mobiles = Product.objects.filter(category='M').filter(brand=data)
-	elif data == 'below':
-			mobiles = Product.objects.filter(category='M').filter(discounted_price__lt=200)
-	elif data == 'above':
-			mobiles = Product.objects.filter(category='M').filter(discounted_price__gt=200)
-	return render(request, 'FV.html', {'mobiles':mobiles, 'totalitem':totalitem})
-
-
-# def mobile(request, data=None):
-# 	totalitem = 0
-# 	if request.user.is_authenticated:
-# 		totalitem = len(Cart.objects.filter(user=request.user))
-# 	if data==None :
-# 			mobiles = Product.objects.filter(category='M')
-# 	elif data == 'Redmi' or data == 'Samsung':
-# 			mobiles = Product.objects.filter(category='M').filter(brand=data)
-# 	elif data == 'below':
-# 			mobiles = Product.objects.filter(category='M').filter(discounted_price__lt=10000)
-# 	elif data == 'above':
-# 			mobiles = Product.objects.filter(category='M').filter(discounted_price__gt=10000)
-# 	return render(request, 'vegitables.html', {'mobiles':mobiles, 'totalitem':totalitem})
 
 
 
